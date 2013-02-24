@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>iisnode logs</title>
+    <style type="text/css">
+        body
+        {
+            font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+        }
+        table
+        {
+            border-collapse: collapse;
+        }
+        td, th
+        {
+            border: 1px solid lightgray;
+            padding: 3px 7px 2px 7px;
+        }
+        th
+        {
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 4px;
+            background-color: Gray;
+            color: #ffffff;
+        }
+        td.stderr
+        {
+            color: Red;
+        }
+    </style>
+</head>
+<body>
+    <table id="logFilesTable">
+        <tr>
+            <th>
+                Computer name
+            </th>
+            <th>
+                PID
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Created
+            </th>
+            <th>
+                Link
+            </th>
+        </tr>
+    </table>
+    <p id="lastUpdated"></p>
+    <script type="text/javascript">
+
+        // this is replaced with actual data at runtime by code in interceptor.js
+        var logFiles = [{"file":"FUENTESTORRES-1364-stdout-1360700612728.txt","computername":"FUENTESTORRES","pid":1364,"type":"stdout","created":1360700612728},{"file":"FUENTESTORRES-1492-stdout-1360701593857.txt","computername":"FUENTESTORRES","pid":1492,"type":"stdout","created":1360701593857},{"file":"FUENTESTORRES-1692-stderr-1360701784298.txt","computername":"FUENTESTORRES","pid":1692,"type":"stderr","created":1360701784298},{"file":"FUENTESTORRES-1692-stdout-1360701784265.txt","computername":"FUENTESTORRES","pid":1692,"type":"stdout","created":1360701784265},{"file":"FUENTESTORRES-2748-stdout-1360701251921.txt","computername":"FUENTESTORRES","pid":2748,"type":"stdout","created":1360701251921},{"file":"FUENTESTORRES-2824-stdout-1360701608911.txt","computername":"FUENTESTORRES","pid":2824,"type":"stdout","created":1360701608911},{"file":"FUENTESTORRES-2852-stderr-1360700726713.txt","computername":"FUENTESTORRES","pid":2852,"type":"stderr","created":1360700726713},{"file":"FUENTESTORRES-2852-stdout-1360700726699.txt","computername":"FUENTESTORRES","pid":2852,"type":"stdout","created":1360700726699},{"file":"FUENTESTORRES-2968-stderr-1360702068976.txt","computername":"FUENTESTORRES","pid":2968,"type":"stderr","created":1360702068976},{"file":"FUENTESTORRES-2968-stdout-1360702068948.txt","computername":"FUENTESTORRES","pid":2968,"type":"stdout","created":1360702068948},{"file":"FUENTESTORRES-3304-stdout-1360701673004.txt","computername":"FUENTESTORRES","pid":3304,"type":"stdout","created":1360701673004},{"file":"FUENTESTORRES-3508-stdout-1360700680720.txt","computername":"FUENTESTORRES","pid":3508,"type":"stdout","created":1360700680720},{"file":"FUENTESTORRES-3664-stdout-1360701493822.txt","computername":"FUENTESTORRES","pid":3664,"type":"stdout","created":1360701493822},{"file":"FUENTESTORRES-3940-stdout-1360701691438.txt","computername":"FUENTESTORRES","pid":3940,"type":"stdout","created":1360701691438},{"file":"FUENTESTORRES-4016-stderr-1360701573014.txt","computername":"FUENTESTORRES","pid":4016,"type":"stderr","created":1360701573014},{"file":"FUENTESTORRES-4016-stdout-1360701572987.txt","computername":"FUENTESTORRES","pid":4016,"type":"stdout","created":1360701572987},{"file":"FUENTESTORRES-4020-stdout-1360701703314.txt","computername":"FUENTESTORRES","pid":4020,"type":"stdout","created":1360701703314},{"file":"FUENTESTORRES-4120-stderr-1360702053024.txt","computername":"FUENTESTORRES","pid":4120,"type":"stderr","created":1360702053024},{"file":"FUENTESTORRES-4120-stdout-1360702052998.txt","computername":"FUENTESTORRES","pid":4120,"type":"stdout","created":1360702052998},{"file":"FUENTESTORRES-4152-stdout-1360702114493.txt","computername":"FUENTESTORRES","pid":4152,"type":"stdout","created":1360702114493},{"file":"FUENTESTORRES-4328-stdout-1360701804166.txt","computername":"FUENTESTORRES","pid":4328,"type":"stdout","created":1360701804166},{"file":"FUENTESTORRES-4340-stderr-1360702102449.txt","computername":"FUENTESTORRES","pid":4340,"type":"stderr","created":1360702102449},{"file":"FUENTESTORRES-4340-stdout-1360702102410.txt","computername":"FUENTESTORRES","pid":4340,"type":"stdout","created":1360702102410},{"file":"FUENTESTORRES-4412-stderr-1360702076926.txt","computername":"FUENTESTORRES","pid":4412,"type":"stderr","created":1360702076926},{"file":"FUENTESTORRES-4412-stdout-1360702076897.txt","computername":"FUENTESTORRES","pid":4412,"type":"stdout","created":1360702076897},{"file":"FUENTESTORRES-4460-stdout-1360701821014.txt","computername":"FUENTESTORRES","pid":4460,"type":"stdout","created":1360701821014},{"file":"FUENTESTORRES-4484-stdout-1360702085540.txt","computername":"FUENTESTORRES","pid":4484,"type":"stdout","created":1360702085540},{"file":"FUENTESTORRES-4584-stdout-1360701840114.txt","computername":"FUENTESTORRES","pid":4584,"type":"stdout","created":1360701840114},{"file":"FUENTESTORRES-4756-stdout-1360701866493.txt","computername":"FUENTESTORRES","pid":4756,"type":"stdout","created":1360701866493},{"file":"FUENTESTORRES-4820-stdout-1360702282735.txt","computername":"FUENTESTORRES","pid":4820,"type":"stdout","created":1360702282735},{"file":"FUENTESTORRES-5032-stderr-1360701929190.txt","computername":"FUENTESTORRES","pid":5032,"type":"stderr","created":1360701929190},{"file":"FUENTESTORRES-5032-stdout-1360701929168.txt","computername":"FUENTESTORRES","pid":5032,"type":"stdout","created":1360701929168},{"file":"FUENTESTORRES-5156-stderr-1360701944050.txt","computername":"FUENTESTORRES","pid":5156,"type":"stderr","created":1360701944050},{"file":"FUENTESTORRES-5156-stdout-1360701944028.txt","computername":"FUENTESTORRES","pid":5156,"type":"stdout","created":1360701944028},{"file":"FUENTESTORRES-5220-stdout-1360701953325.txt","computername":"FUENTESTORRES","pid":5220,"type":"stdout","created":1360701953325},{"file":"FUENTESTORRES-5484-stdout-1360701976182.txt","computername":"FUENTESTORRES","pid":5484,"type":"stdout","created":1360701976182},{"file":"FUENTESTORRES-5764-stderr-1360702002909.txt","computername":"FUENTESTORRES","pid":5764,"type":"stderr","created":1360702002909},{"file":"FUENTESTORRES-5764-stdout-1360702002877.txt","computername":"FUENTESTORRES","pid":5764,"type":"stdout","created":1360702002877},{"file":"FUENTESTORRES-5772-stdout-1360702323983.txt","computername":"FUENTESTORRES","pid":5772,"type":"stdout","created":1360702323983},{"file":"FUENTESTORRES-6032-stderr-1360702040999.txt","computername":"FUENTESTORRES","pid":6032,"type":"stderr","created":1360702040999},{"file":"FUENTESTORRES-6032-stdout-1360702040967.txt","computername":"FUENTESTORRES","pid":6032,"type":"stdout","created":1360702040967},{"file":"FUENTESTORRES-644-stdout-1360701625733.txt","computername":"FUENTESTORRES","pid":644,"type":"stdout","created":1360701625733},{"file":"FUENTESTORRES-724-stderr-1360701197505.txt","computername":"FUENTESTORRES","pid":724,"type":"stderr","created":1360701197505},{"file":"FUENTESTORRES-724-stdout-1360701197486.txt","computername":"FUENTESTORRES","pid":724,"type":"stdout","created":1360701197486}];
+        var lastUpdated = 1360702325465;
+        var date = new Date();
+
+        date.setTime(lastUpdated);
+        document.getElementById('lastUpdated').innerHTML = 'Index was last updated ' + date;
+
+        logFiles.sort(function (a, b) {
+            return b.created - a.created;
+        });
+
+        var logFilesTable = document.getElementById("logFilesTable");
+        for (var i = 0; i < logFiles.length; i++) {
+            var logFile = logFiles[i];
+            date.setTime(logFile.created);
+            var row = logFilesTable.insertRow(-1);
+            var computerNameCell = row.insertCell(0);
+            var pidCell = row.insertCell(1);
+            var typeCell = row.insertCell(2);
+            var dateCell = row.insertCell(3);
+            var logCell = row.insertCell(4);
+            computerNameCell.innerHTML = logFile.computername;
+            pidCell.innerHTML = logFile.pid.toString();
+            typeCell.innerHTML = logFile.type;
+            typeCell.setAttribute('class', logFile.type);
+            dateCell.innerHTML = date.toString();
+            logCell.innerHTML = '<a href="' + logFile.file + '">log</a>';
+        };
+
+    </script>
+</body>
+</html>

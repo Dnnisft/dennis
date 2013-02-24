@@ -1,0 +1,9 @@
+[object Object]
+    at C:\Users\Dennis\Documents\My Web Sites\Sitio de inicio1\routes\global.js:17:15
+    at callbacks (C:\Users\Dennis\Documents\My Web Sites\Sitio de inicio1\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\Dennis\Documents\My Web Sites\Sitio de inicio1\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\Dennis\Documents\My Web Sites\Sitio de inicio1\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\Dennis\Documents\My Web Sites\Sitio de inicio1\node_modules\express\lib\router\index.js:280:4)
+    at Object.handle (C:\Users\Dennis\Documents\My Web Sites\Sitio de inicio1\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\Dennis\Documents\My Web Sites\Sitio de inicio1\node_modules\express\node_modules\connect\lib\http.js:204:15)
+    at Object.oncomplete (C:\Users\Dennis\Documents\My Web Sites\Sitio de inicio1\node_modules\connect\lib\middleware\static.js:159:11)
